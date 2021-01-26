@@ -1,10 +1,9 @@
 # Stubborn
 
-[![Build Status](https://travis-ci.org/krux/stubborn.svg?branch=master)](http://travis-ci.org/krux/stubborn)
-[![Stories in Ready](https://badge.waffle.io/krux/stubborn.png?label=ready&title=Ready)](https://waffle.io/krux/stubborn)
-
 > Stubborn: having or showing dogged determination not to change one's attitude
 > or position on something.
+
+[![CircleCI](https://circleci.com/gh/salesforce/stubborn.svg?style=svg)](https://circleci.com/gh/salesforce/stubborn)
 
 A scala library for performing retries on actions that might fail.
 

@@ -20,16 +20,26 @@ lazy val publishSettings = Seq(
       Some("releases" at "https://oss.sonatype.org/service/local/staging/deploy/maven2")
   },
   licenses := Seq("Apache-2.0" -> url("http://opensource.org/licenses/Apache-2.0")),
-  homepage := Some(url("https://github.com/krux/stubborn")),
+  homepage := Some(url("https://github.com/salesforce/stubborn")),
   scmInfo := Some(
     ScmInfo(
-      url("https://github.com/krux/stubborn"),
-      "scm:git:git@github.com:krux/stubborn.git"
+      url("https://github.com/salesforce/stubborn"),
+      "scm:git:git@github.com:salesforce/stubborn.git"
     )
   ),
+  credentials += Credentials(
+    "Sonatype Nexus Repository Manager",
+    "oss.sonatype.org",
+    sys.env.getOrElse("SONATYPE_USERNAME",""),
+    sys.env.getOrElse("SONATYPE_PASSWORD","")
+  ),
   developers := List(
-    Developer(id = "realstraw", name = "Kexin Xie", email = "kexin.xie@salesforce.com", url = url("http://github.com/realstraw")),
-    Developer(id = "sethyates", name = "Seth Yates", email = "syates@salesforce.com", url = url("http://github.com/sethyates"))
+    Developer(
+      id = "realstraw",
+      name = "Kexin Xie",
+      email = "kexin.xie@salesforce.com",
+      url = url("http://github.com/realstraw")
+    )
   )
 )
 
